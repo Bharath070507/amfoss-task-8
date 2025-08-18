@@ -1,0 +1,60 @@
+<html>
+<head>
+<style>
+  body {
+    background: #E8AD6D;
+  }
+  .rect {
+    margin-left: 55px;
+    margin-top: 90px;
+    height: 50px;
+    width: 270px;
+    background: #3B240C;
+  }
+  .square {
+    margin-top: 15px;
+    margin-left: 0px;
+    height: 50px;
+    width: 60px;
+    background: #3B240C;
+    display: inline-block;
+  }
+  .wheels {
+    display: flex;
+    justify-content: space-between;
+    width: 270px;
+    margin-left: 55px;
+    margin-top: 5px;
+  }
+  .semi-donut {
+    width: 100px;
+    height: 65px;
+    background: #3b250b; /* dark brown */
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    position: relative;
+    overflow: hidden;
+  }
+  .semi-donut::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 30px;
+    background: #E8AD6D; /* same as body bg */
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+</style>
+</head>
+<body>
+  <div class="rect"></div>
+  <div class="wheels">
+    <div class="semi-donut"></div>
+    <div class="square"></div>
+    <div class="semi-donut"></div>
+  </div>
+</body>
+</html>
